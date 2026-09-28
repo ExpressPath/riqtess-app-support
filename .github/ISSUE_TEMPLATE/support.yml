@@ -1,0 +1,58 @@
+name: Support request
+description: Ask for help with riqtess or report a reproducible problem.
+title: "Support request: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This report will be public.** Do not include passwords, verification codes, QR-code images, private messages, account credentials, or precise location.
+  - type: input
+    id: app-version
+    attributes:
+      label: riqtess version and build
+      description: Find this in the app or TestFlight.
+      placeholder: 0.13.47 (28)
+    validations:
+      required: true
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version
+      placeholder: iOS 26.x
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: iPhone 16
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that lead to the problem. Use dummy account values.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected and actual result
+      description: Explain what you expected and what happened instead.
+      placeholder: |
+        Expected:
+        Actual:
+    validations:
+      required: true
+  - type: textarea
+    id: extra-context
+    attributes:
+      label: Other helpful context
+      description: Share non-sensitive details only. Do not attach QR images or private account information.
+    validations:
+      required: false
