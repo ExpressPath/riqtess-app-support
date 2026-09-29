@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#07080d" />
-    <title>riqtess Support</title>
-    <meta name="description" content="Official support and troubleshooting for riqtess, the nearby profile-card sharing app." />
+    <title>riqtess Support &amp; iPhone Install</title>
+    <meta name="description" content="Install the latest riqtess iPhone beta with Apple TestFlight, or find official support and troubleshooting." />
     <style>
       :root {
         color-scheme: dark;
@@ -43,6 +43,9 @@
       .faq p { margin: 0; font-size: 15px; }
       ol, ul { padding-left: 22px; }
       .privacy-note { padding: 15px 17px; border-left: 3px solid #a678ff; border-radius: 8px; background: #171522; }
+      .install-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; counter-reset: install; }
+      .install-steps li { padding: 16px; border: 1px solid #2c3040; border-radius: 16px; background: #11131c; counter-increment: install; }
+      .install-steps li::before { content: counter(install); display: grid; width: 28px; height: 28px; place-items: center; margin-bottom: 8px; border-radius: 50%; background: #262944; color: #72e9f3; font-weight: 800; }
       .language-ja { margin-top: 18px; }
       .language-ja p, .language-ja li { line-height: 1.85; }
       @media (max-width: 620px) {
@@ -51,6 +54,7 @@
         .wordmark { font-size: 30px; }
         .nav { gap: 12px; }
         .grid { grid-template-columns: 1fr; }
+        .install-steps { grid-template-columns: 1fr; }
         .panel { border-radius: 22px; }
         footer { align-items: flex-start; flex-direction: column; }
       }
@@ -61,6 +65,7 @@
       <header>
         <a class="wordmark" href="./" aria-label="riqtess support home">riqtess</a>
         <nav class="nav" aria-label="Page sections">
+          <a href="#install">Install</a>
           <a href="#help">Help</a>
           <a href="#contact">Contact</a>
           <a href="#ja" lang="ja">日本語</a>
@@ -76,6 +81,27 @@
           <a class="button secondary" href="privacy.html">Privacy policy</a>
         </div>
         <p class="notice">Support requests use GitHub Issues and are public. Please do not include passwords, verification codes, QR-code images, private messages, or other sensitive information. A GitHub account is required to submit a request.</p>
+      </section>
+
+      <section class="panel section" id="install" aria-labelledby="install-title">
+        <div class="eyebrow">iPhone · TestFlight</div>
+        <h2 id="install-title">iPhoneにインストール / Install on iPhone</h2>
+        <p lang="ja">このページをiPhoneのSafariで開き、TestFlightで参加すると、テスト配信中の最新版をインストールできます。</p>
+        <div class="actions">
+          <a class="button" href="https://testflight.apple.com/join/FpCXmFth">TestFlightで参加・インストール</a>
+          <a class="button secondary" href="https://apps.apple.com/app/testflight/id899247664">TestFlightをApp Storeで入手</a>
+        </div>
+        <p lang="en">Open this page in iPhone Safari, join the riqtess beta in TestFlight, and install the newest build available to testers.</p>
+        <div class="actions">
+          <a class="button secondary" href="https://testflight.apple.com/join/FpCXmFth">Join and install with TestFlight</a>
+          <a class="button secondary" href="https://apps.apple.com/app/testflight/id899247664">Get TestFlight from the App Store</a>
+        </div>
+        <ol class="install-steps">
+          <li>Install Apple TestFlight from the App Store if it is not already on your iPhone.</li>
+          <li>Open this page in Safari and tap “Join and install with TestFlight”.</li>
+          <li>Accept the beta invitation in TestFlight, then tap Install or Update.</li>
+        </ol>
+        <p class="notice">The newest release appears after Apple finishes processing and approves it for external beta testing. iPhone does not install a raw app file directly from an ordinary website; this page uses Apple’s TestFlight installation flow.</p>
       </section>
 
       <section class="panel section" id="help" aria-labelledby="help-title">
@@ -113,6 +139,13 @@
       <section class="panel language-ja" id="ja" lang="ja" aria-labelledby="ja-title">
         <div class="eyebrow">日本語サポート</div>
         <h2 id="ja-title">riqtess サポート</h2>
+        <h3>iPhoneへのインストール</h3>
+        <p>このページをiPhoneのSafariで開き、「TestFlightで参加・インストール」をタップしてください。TestFlightが未インストールの場合は、先にApp Storeから入手します。招待を承認すると、テスト配信中の最新版をインストールまたはアップデートできます。</p>
+        <div class="actions">
+          <a class="button" href="https://testflight.apple.com/join/FpCXmFth">TestFlightで参加・インストール</a>
+          <a class="button secondary" href="https://apps.apple.com/app/testflight/id899247664">TestFlightをApp Storeで入手</a>
+        </div>
+        <p class="notice">新しいビルドはAppleの処理と外部テスト審査が完了してから表示されます。通常のWebサイトからiPhoneへIPAを直接インストールする方式ではなく、Apple公式のTestFlightを使います。</p>
         <p>カードデザインの選択、アカウントリンクの登録、近くの iPhone とのカード共有について、上の案内をご確認ください。解決しない場合はサポートフォームからお問い合わせください。</p>
         <p>フォームと投稿は公開されます。パスワード、認証コード、QR コード画像、個人アカウント情報、位置情報などは入力しないでください。送信には GitHub アカウントが必要です。</p>
         <p><a href="https://github.com/ExpressPath/riqtess-app-support/issues/new?template=support.yml">サポートフォームを開く</a> · <a href="privacy.html">プライバシーポリシー</a></p>
